@@ -1,1 +1,756 @@
+<!doctype html>
+<html lang="id">
 
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>The Gentleman Gift ID — Premium Gifts</title>
+    <meta name="description" content="Kado ulang tahun pria premium — The Gentleman Gift ID" />
+
+    <!-- Fonts: fallback stack included; add Google Fonts if you want -->
+    <style>
+         :root {
+            --bg: #0b0b0b;
+            --gold: #c8a043;
+            --muted: #9aa0a6;
+            --card: #ffffff;
+            --glass: rgba(255, 255, 255, 0.06);
+            --max-width: 1200px;
+            --radius: 12px;
+            --container-padding: 6vw;
+            --transition: 200ms ease;
+        }
+        /* Reset & base */
+        
+        * {
+            box-sizing: border-box
+        }
+        
+        html,
+        body {
+            height: 100%
+        }
+        
+        body {
+            margin: 0;
+            font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+            background: #fff;
+            color: #111;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            line-height: 1.45;
+        }
+        
+        a {
+            color: inherit;
+            text-decoration: none
+        }
+        
+        img,
+        video {
+            max-width: 100%;
+            display: block
+        }
+        
+        button {
+            font: inherit
+        }
+        /* Container helper */
+        
+        .container {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding-left: var(--container-padding);
+            padding-right: var(--container-padding)
+        }
+        /* NAVBAR */
+        
+        .nav {
+            position: sticky;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 60;
+            background: linear-gradient(180deg, rgba(11, 11, 11, 0.65), rgba(11, 11, 11, 0.25));
+            padding: 12px 0;
+            backdrop-filter: blur(6px);
+        }
+        
+        .nav-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px
+        }
+        
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: #fff
+        }
+        
+        .brand img {
+            height: 46px;
+            width: auto;
+            border-radius: 8px
+        }
+        
+        .brand .title {
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 1
+        }
+        
+        .brand .tag {
+            font-size: 12px;
+            color: rgba(255, 255, 255, 0.8);
+            margin-top: 4px
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 18px;
+            align-items: center
+        }
+        
+        .nav-links a {
+            color: #fff;
+            padding: 8px 6px;
+            border-radius: 8px;
+            font-weight: 600
+        }
+        
+        .nav-links a:focus {
+            outline: 2px solid rgba(255, 255, 255, 0.12)
+        }
+        
+        .cta {
+            background: var(--gold);
+            color: #081217;
+            padding: 8px 14px;
+            border-radius: 999px;
+            font-weight: 700
+        }
+        /* Mobile menu */
+        
+        .hamburger {
+            display: none;
+            background: transparent;
+            border: 0;
+            color: #fff;
+            font-size: 20px
+        }
+        
+        .mobile-nav {
+            display: none
+        }
+        /* HERO (mobile-first) */
+        
+        .hero {
+            padding: 48px 0;
+            background-image: url('bg.gif');
+            background-size: cover;
+            background-position: center;
+            color: #fff
+        }
+        
+        .hero-inner {
+            display: grid;
+            gap: 28px;
+            align-items: center
+        }
+        
+        .eyebrow {
+            font-weight: 600;
+            color: rgba(255, 255, 255, 0.9)
+        }
+        
+        .hero-title {
+            font-size: 28px;
+            margin: 0;
+            font-weight: 800;
+            line-height: 1.02;
+            text-shadow: 0 8px 30px rgba(0, 0, 0, 0.45)
+        }
+        
+        .hero-sub {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 15px
+        }
+        
+        .btn-row {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap
+        }
+        
+        .btn {
+            padding: 12px 16px;
+            border-radius: 999px;
+            font-weight: 700;
+            border: 0;
+            cursor: pointer;
+            transition: var(--transition)
+        }
+        
+        .btn-primary {
+            background: var(--gold);
+            color: #081217
+        }
+        
+        .btn-ghost {
+            background: transparent;
+            border: 2px solid rgba(255, 255, 255, 0.16);
+            color: #fff
+        }
+        /* Hero aside card */
+        
+        .hero-card {
+            background: rgba(0, 0, 0, 0.45);
+            padding: 18px;
+            border-radius: 12px;
+            backdrop-filter: blur(4px)
+        }
+        
+        .card-quick {
+            display: flex;
+            gap: 12px;
+            align-items: center
+        }
+        
+        .card-quick img {
+            width: 64px;
+            height: 64px;
+            object-fit: cover;
+            border-radius: 8px
+        }
+        
+        .card-meta {
+            font-size: 14px
+        }
+        
+        .card-price {
+            font-size: 13px;
+            color: rgba(255, 255, 255, 0.85)
+        }
+        /* SECTIONS */
+        
+        section {
+            padding: 48px 0
+        }
+        
+        h3 {
+            margin: 0 0 18px;
+            font-size: 20px
+        }
+        
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            gap: 18px
+        }
+        
+        .product {
+            background: var(--card);
+            padding: 14px;
+            border-radius: 12px;
+            box-shadow: 0 8px 30px rgba(13, 13, 13, 0.06);
+            text-align: left
+        }
+        
+        .product img {
+            height: 180px;
+            object-fit: cover;
+            border-radius: 8px
+        }
+        
+        .product h4 {
+            margin: 12px 0 6px;
+            font-size: 16px
+        }
+        
+        .product p {
+            color: var(--muted);
+            font-size: 14px;
+            margin: 0
+        }
+        
+        .price-old {
+            text-decoration: line-through;
+            color: #888;
+            margin-right: 8px
+        }
+        
+        .price-new {
+            color: #d10000;
+            font-weight: 700
+        }
+        
+        .buy {
+            margin-top: 10px;
+            padding: 10px 12px;
+            background: #111;
+            color: #fff;
+            border-radius: 8px;
+            cursor: pointer;
+            border: 0
+        }
+        /* build-a-box */
+        
+        .build {
+            display: flex;
+            flex-direction: column;
+            gap: 18px
+        }
+        
+        .build .preview img {
+            width: 100%;
+            border-radius: 14px;
+            object-fit: cover
+        }
+        
+        .controls {
+            background: var(--card);
+            padding: 14px;
+            border-radius: 12px;
+            box-shadow: 0 8px 30px rgba(13, 13, 13, 0.06)
+        }
+        
+        .controls label {
+            font-weight: 600;
+            display: block;
+            margin-top: 8px
+        }
+        
+        .controls select,
+        .controls textarea,
+        .controls input {
+            width: 100%;
+            padding: 10px;
+            border-radius: 8px;
+            border: 1px solid #e6e6e6;
+            margin-top: 8px
+        }
+        
+        .controls button {
+            margin-top: 12px;
+            padding: 12px 14px;
+            background: var(--gold);
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 700
+        }
+        /* two-column section */
+        
+        .two-column {
+            display: grid;
+            gap: 20px
+        }
+        
+        .left-box video {
+            width: 100%;
+            border-radius: 12px
+        }
+        
+        .order-list {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-top: 12px
+        }
+        
+        .order-item {
+            padding: 10px;
+            background: rgba(0, 0, 0, 0.06);
+            border-radius: 10px;
+            border-left: 4px solid var(--gold)
+        }
+        /* footer */
+        
+        footer {
+            background: #081217;
+            color: var(--muted);
+            padding: 24px 0
+        }
+        /* Utility */
+        
+        .row {
+            display: flex;
+            gap: 12px;
+            align-items: center
+        }
+        /* Responsive: tablet and up */
+        
+        @media(min-width:700px) {
+            .hero-inner {
+                grid-template-columns: 1fr 420px;
+                align-items: center
+            }
+            .hero-title {
+                font-size: 40px
+            }
+            .grid {
+                grid-template-columns: repeat(2, 1fr)
+            }
+            .build {
+                flex-direction: row
+            }
+            .controls {
+                width: 360px;
+                flex-shrink: 0
+            }
+            .two-column {
+                grid-template-columns: 1.6fr 1fr
+            }
+        }
+        
+        @media(min-width:1000px) {
+            .container {
+                padding-left: 32px;
+                padding-right: 32px
+            }
+            .grid {
+                grid-template-columns: repeat(3, 1fr)
+            }
+            .hero {
+                height: 92vh
+            }
+            .hero-title {
+                font-size: 56px
+            }
+            .nav-inner {
+                padding: 0 8px
+            }
+            .hamburger {
+                display: none
+            }
+        }
+        /* Mobile-specific adjustments */
+        
+        @media(max-width:699px) {
+            .nav-inner {
+                padding: 0 8px
+            }
+            .nav-links {
+                display: none
+            }
+            .hamburger {
+                display: inline-flex;
+                align-items: center;
+                gap: 8px
+            }
+            .mobile-nav {
+                display: block;
+                background: linear-gradient(180deg, rgba(11, 11, 11, 0.9), rgba(11, 11, 11, 0.95));
+                position: absolute;
+                top: 64px;
+                left: 0;
+                right: 0;
+                padding: 12px;
+                z-index: 70;
+                border-top: 1px solid rgba(255, 255, 255, 0.04)
+            }
+            .mobile-nav a {
+                display: block;
+                padding: 10px 0;
+                color: #fff;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.03)
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="nav" role="banner">
+        <div class="container nav-inner">
+            <div class="brand">
+                <img src="logo.png" alt="The Gentleman Gift ID logo" id="brand-logo" />
+                <div>
+                    <div class="title">The Gentleman Gift ID</div>
+                    <div class="tag">Kado Pria — Premium & Eksklusif</div>
+                </div>
+            </div>
+
+            <nav aria-label="Main navigation">
+                <button class="hamburger" id="hamburger" aria-expanded="false" aria-controls="mobileMenu">☰</button>
+
+                <div class="nav-links" role="menubar">
+                    <a href="#produk" role="menuitem">Produk</a>
+                    <a href="#build" role="menuitem">Build a Box</a>
+                    <a href="#testimoni-order" role="menuitem">Testimoni</a>
+                    <a href="#about" role="menuitem">Tentang</a>
+                    <a class="cta" href="#order" role="menuitem">Order</a>
+                </div>
+            </nav>
+        </div>
+
+        <!-- Mobile nav (hidden on desktop) -->
+        <div id="mobileMenu" class="mobile-nav" hidden>
+            <a href="#produk">Produk</a>
+            <a href="#build">Build a Box</a>
+            <a href="#testimoni-order">Testimoni</a>
+            <a href="#about">Tentang</a>
+            <a href="#order">Order</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- HERO -->
+        <section class="hero">
+            <div class="container hero-inner">
+                <div>
+                    <div class="eyebrow">Kado Ulang Tahun Pria</div>
+                    <h1 class="hero-title">Hadiah Berkelas untuk Pria yang Berkelas</h1>
+                    <p class="hero-sub">Koleksi curated: clutch bag, jam tangan, dompet — dikemas rapi, siap dikirim.</p>
+
+                    <div class="btn-row" style="margin-top:16px">
+                        <button class="btn btn-primary" onclick="location.href='#produk'">Jelajahi Koleksi</button>
+                        <button class="btn btn-ghost" onclick="location.href='#build'">Buat Kotak Kado</button>
+                    </div>
+                </div>
+
+                <aside class="hero-card" aria-hidden="true">
+                    <div style="font-weight:700;margin-bottom:8px">Best Seller — Paket lengkap</div>
+                    <div class="card-quick">
+                        <img src="tas, dompet, jam tangan.webp" alt="Paket best seller" />
+                        <div class="card-meta">
+                            <div>Box — Tas, Jam, Dompet</div>
+                            <div class="card-price">Mulai dari Rp 99.000</div>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </section>
+
+        <!-- PRODUCTS -->
+        <section id="produk" class="container">
+            <h3>Produk Unggulan</h3>
+            <div class="grid" style="margin-top:12px">
+
+                <article class="product" aria-labelledby="p1-title">
+                    <img src="dompet + ikat pinggang.webp" alt="Box + Clutch Bag + Dompet" />
+                    <h4 id="p1-title">Set Kombinasi Dompet Dan Sabuk</h4>
+                    <p>
+                        Paket elegan berisi Dompet Dan Sabuk Kulit Sapi Pria (Kotak+Tas Hadiah)<br>
+                        <span class="price-old">Rp190.000</span>
+                        <span class="price-new">Rp130.000</span>
+                    </p>
+                    <button class="buy" type="button">Beli</button>
+                </article>
+
+                <article class="product" aria-labelledby="p1-title">
+                    <img src="tas dompet.jpeg" alt="Box + Clutch Bag + Dompet" />
+                    <h4 id="p1-title">Clutch Bag,Dompet,Jam Tangan+Box</h4>
+                    <p>
+                        Paket elegan berisi clutch premium + dompet kulit pria dan jam tangan.<br>
+                        <span class="price-old">Rp190.000</span>
+                        <span class="price-new">Rp130.000</span>
+                    </p>
+                    <button class="buy" type="button">Beli</button>
+                </article>
+
+                <article class="product" aria-labelledby="p2-title">
+                    <img src="tas jam tangan.jpeg" alt="Clutch Bag + Jam Tangan + Box" />
+                    <h4 id="p2-title">Clutch Bag,Jam Tangan+Box</h4>
+                    <p>
+                        Paket premium berisi clutch mewah & jam tangan stylish.<br>
+                        <span class="price-old">Rp190.000</span>
+                        <span class="price-new">Rp130.000</span>
+                    </p>
+                    <button class="buy" type="button">Beli</button>
+                </article>
+
+                <article class="product" aria-labelledby="p3-title">
+                    <img src="tas, dompet, jam tangan.webp" alt="Clutch Bag, Jam, Dompet + Box" />
+                    <h4 id="p3-title">Clutch Bag,Jam,Dompet+Box</h4>
+                    <p>
+                        Paket lengkap cocok untuk berbagai kesempatan.<br>
+                        <span class="price-old">Rp250.000</span>
+                        <span class="price-new">Rp160.000</span>
+                    </p>
+                    <button class="buy" type="button">Beli</button>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- BUILD A BOX -->
+        <section id="build" style="background:linear-gradient(180deg,#f8f8f8,#fff);padding-top:36px;padding-bottom:36px">
+            <div class="container">
+                <h3>Buat kado sekarang</h3>
+                <div class="build" style="margin-top:12px">
+                    <div class="preview">
+                        <img src="bg 2.gif" alt="box preview" />
+                        <p style="color:var(--muted);margin-top:8px">Pilih yang paket, kami kemas rapi dengan pita dan kartu ucapan.</p>
+                    </div>
+
+                    <div class="controls" aria-label="Kontrol pembuatan box">
+                        <label for="box1">Pilih Produk</label>
+                        <select id="box1">
+              <option>Clutch Bag</option>
+              <option>Clutch Bag, Dompet+Box</option>
+              <option>Clutch Bag, Jam+Box</option>
+              <option>Clutch Bag, Jam, Dompet+Box</option>
+            </select>
+
+                        <label for="box2">Pilihan kartu ucapan</label>
+                        <select id="box2">
+              <option>Tidak ada</option>
+              <option>Birthday</option>
+              <option>Anniversary</option>
+              <option>Custom</option>
+            </select>
+
+                        <label for="cardNote">Catatan untuk kartu ucapan</label>
+                        <textarea id="cardNote" rows="3" placeholder="Tulis pesan... (opsional)"></textarea>
+
+                        <button id="buildBtn" type="button">Kirim ke WhatsApp</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TESTIMONI & ORDERS -->
+        <section id="testimoni-order" class="container" style="padding-top:36px;padding-bottom:36px">
+            <div class="two-column" style="margin-top:12px">
+                <div class="left-box">
+                    <h3>Testimoni Pembeli</h3>
+                    <div style="margin-top:12px">
+                        <video controls>
+              <source src="testimoni1.mp4" type="video/mp4">
+              Browser Anda tidak mendukung pemutar video.
+            </video>
+                    </div>
+                </div>
+
+                <aside class="right-box">
+                    <h3>Order Terkini</h3>
+                    <div id="order-list" class="order-list" aria-live="polite" style="margin-top:12px"></div>
+                </aside>
+            </div>
+        </section>
+
+        <!-- ABOUT -->
+        <section id="about" class="container">
+            <h3>Tentang The Gentleman Gift ID</h3>
+            <p style="margin-top:12px">Brand kami fokus pada kado pria yang berkesan — kualitas, kemasan, dan layanan adalah prioritas. Siap bantu kamu pilih kado terbaik sesuai momen.</p>
+        </section>
+
+        <!-- CONTACT / ORDER FORM -->
+        <section id="order" style="background:#f6f7f8;padding-top:36px;padding-bottom:36px">
+            <div class="container">
+                <h3>Order Sekarang</h3>
+                <form id="quick-order" style="max-width:720px;margin-top:12px">
+                    <div style="display:flex;gap:12px;flex-wrap:wrap">
+                        <input name="name" placeholder="Nama" required />
+                        <input name="product" placeholder="Produk yang dipesan" required />
+                    </div>
+                    <textarea name="address" placeholder="Alamat" rows="3" style="width:100%;margin-top:12px;padding:10px;border-radius:8px;border:1px solid #e6e6e6" required></textarea>
+                    <button type="submit" style="margin-top:12px;padding:12px 16px;background:var(--gold);border:none;border-radius:8px;font-weight:700;cursor:pointer">Kirim ke WhatsApp</button>
+                </form>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="container" style="display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap">
+            <div>
+                <strong style="color:#fff">The Gentleman Gift ID</strong>
+                <div style="color:var(--muted);font-size:14px;margin-top:6px">Kado premium & kemasan eksklusif</div>
+            </div>
+            <div style="color:var(--muted);font-size:14px">© 2025 The Gentleman Gift ID • All rights reserved</div>
+        </div>
+    </footer>
+
+    <!-- SCRIPTS: WA integration, fake order feed, interactions -->
+    <script>
+        (function() {
+            const waNumber = '6282318703305'; // ganti nomor WA kamu di sini tanpa +
+
+            // Mobile menu toggle
+            const hamburger = document.getElementById('hamburger');
+            const mobileMenu = document.getElementById('mobileMenu');
+            hamburger.addEventListener('click', () => {
+                const open = mobileMenu.hasAttribute('hidden');
+                if (open) {
+                    mobileMenu.removeAttribute('hidden');
+                    hamburger.setAttribute('aria-expanded', 'true');
+                } else {
+                    mobileMenu.setAttribute('hidden', '');
+                    hamburger.setAttribute('aria-expanded', 'false');
+                }
+            });
+
+            // Fake order feed (kept simple & accessible)
+            const fakeOrders = [
+                "Rizky - Jakarta - Box + Clutch Bag",
+                "Alvin - Bandung - Box + Clutch Bag + Dompet",
+                "Rendi - Surabaya - Box + Clutch + Jam",
+                "Bayu - Semarang - Box Premium Edition",
+                "Fajar - Depok - Box + Jam + Dompet"
+            ];
+
+            const orderList = document.getElementById('order-list');
+
+            function updateOrders() {
+                const item = document.createElement('div');
+                item.className = 'order-item';
+                item.textContent = fakeOrders[Math.floor(Math.random() * fakeOrders.length)];
+                orderList.prepend(item);
+                if (orderList.children.length > 6) orderList.removeChild(orderList.lastChild);
+            }
+            updateOrders();
+            setInterval(updateOrders, 4000);
+
+            // Buy buttons -> open WA with prefilled message
+            document.querySelectorAll('.buy').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const title = this.closest('.product').querySelector('h4').innerText;
+                    const msg = `Halo The Gentleman Gift ID, saya ingin memesan: ${title}. Mohon info stok & cara pembayaran.`;
+                    const url = `https://wa.me/${waNumber}?text=` + encodeURIComponent(msg);
+                    window.open(url, '_blank');
+                });
+            });
+
+            // Build a box
+            document.getElementById('buildBtn').addEventListener('click', function() {
+                const p1 = document.getElementById('box1').value;
+                const p2 = document.getElementById('box2').value;
+                const note = document.getElementById('cardNote').value || '-';
+                const msg = `Halo The Gentleman Gift ID, saya ingin membuat box berisi: 1) ${p1}, 2) ${p2}. Catatan: ${note}`;
+                window.open(`https://wa.me/${waNumber}?text=` + encodeURIComponent(msg), '_blank');
+            });
+
+            // Quick order form
+            document.getElementById('quick-order').addEventListener('submit', function(e) {
+                e.preventDefault();
+                const form = e.target;
+                const name = form.name.value.trim();
+                const prod = form.product.value.trim();
+                const addr = form.address.value.trim();
+                if (!name || !prod || !addr) return alert('Mohon lengkapi form order');
+                const msg = `Halo The Gentleman Gift ID, saya ${name} ingin pesan: ${prod}. Alamat: ${addr}`;
+                window.open(`https://wa.me/${waNumber}?text=` + encodeURIComponent(msg), '_blank');
+            });
+
+            // Adjust logo size to match title height (graceful)
+            function adjustLogo() {
+                const brand = document.querySelector('.brand');
+                if (!brand) return;
+                const img = brand.querySelector('img');
+                const title = brand.querySelector('.title');
+                if (img && title) {
+                    img.style.height = Math.max(38, Math.round(title.offsetHeight * 1.3)) + 'px';
+                }
+            }
+            window.addEventListener('resize', adjustLogo);
+            setTimeout(adjustLogo, 200);
+
+        })();
+    </script>
+</body>
+
+</html>
