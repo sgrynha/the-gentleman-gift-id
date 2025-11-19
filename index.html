@@ -258,7 +258,100 @@
             box-shadow: 0 8px 30px rgba(13, 13, 13, 0.06);
             text-align: left
         }
-        
+        /* ---- PREMIUM PRODUCT CARD UPGRADE ---- */
+.product {
+    position: relative;
+    background: #ffffff;
+    padding: 16px;
+    border-radius: 16px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.06);
+    transition: transform .25s ease, box-shadow .25s ease;
+    overflow: hidden;
+}
+
+.product:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.10);
+}
+
+.product img {
+    height: 210px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+    transition: transform .35s ease;
+}
+
+.product:hover img {
+    transform: scale(1.07);
+}
+
+/* BADGE */
+.badge {
+    position: absolute;
+    top: 14px;
+    left: 14px;
+    background: var(--gold);
+    color: #111;
+    padding: 4px 10px;
+    font-size: 12px;
+    font-weight: 700;
+    border-radius: 6px;
+}
+
+/* TITLE */
+.product h4 {
+    margin: 14px 0 6px;
+    font-size: 17px;
+    font-weight: 700;
+}
+
+/* PRICE */
+.product p {
+    margin: 0;
+    font-size: 14px;
+    color: var(--muted);
+}
+
+.price-row {
+    margin-top: 6px;
+    font-size: 15px;
+}
+
+.price-new {
+    color: #d10000;
+    font-weight: 700;
+}
+
+.price-old {
+    color: #aaa;
+    text-decoration: line-through;
+    margin-right: 8px;
+}
+
+/* BUTTON */
+.buy {
+    margin-top: 12px;
+    padding: 12px;
+    background: #111;
+    color: #fff;
+    border-radius: 12px;
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+    transition: background .2s ease;
+}
+
+.buy:hover {
+    background: #000;
+}
+
+/* GOLD CHECKOUT BUTTON */
+.btn-checkout {
+    background: var(--gold) !important;
+    color: #111 !important;
+}
+
         .product img {
             height: 180px;
             object-fit: cover;
@@ -755,4 +848,5 @@
 
 
 </html>
+
 
